@@ -8,7 +8,8 @@
 </head>
 <body>
     <div id="app">
-        {{message}}
+        {{message}} <br>
+        <input type="text" v-on:keyup = "pressEnter"> <br>
         <button v-on:click = "buttonClick">Click me</button>
     </div>
 </body>
@@ -20,9 +21,13 @@
             function buttonClick(){
                 alert("Clicked");
             }
+            function pressEnter(){
+                alert('pressed');
+            }
             return{
                 message,
-                buttonClick
+                buttonClick,
+                pressEnter
             }
         }
     }).mount("#app");
