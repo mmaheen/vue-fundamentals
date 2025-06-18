@@ -23,6 +23,10 @@
             {{employee}} <br>
             {{employee.name}}
         </p>
+        <p>
+            <h3>Function</h3>
+            {{getRandomNumber()}}
+        </p>
     </div>
 </body>
 <script>
@@ -37,11 +41,16 @@
                 age : 90,
                 salary : 5000
             }
+
+            function getRandomNumber(){
+                return Math.floor(Math.random()*10)+1;
+            }
             return {
                 message,
                 number,
                 numbers,
-                employee
+                employee,
+                getRandomNumber
             };
         },
     }).mount("#vue");
