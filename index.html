@@ -23,7 +23,6 @@
             <h3>Object</h3>
             {{employee}} <br>
             Employee name is : {{employee.name}} <br>
-            <span v-show = "employee.hasCard"> Card </span>
         </p>
         <p>
             <h3>Function</h3>
@@ -35,6 +34,19 @@
                 v-bind
             </h3>
             <a v-bind:href="blogUrl">Blog</a>
+        </p>
+        <p>
+            <h3>
+                V-Show
+            </h3>
+            <span v-show = "employee.hasCard"> Card </span>
+        </p>
+        <p>
+            <h3>
+                V-if
+            </h3>
+            <span v-if = "employee.hasCard"> Card </span>
+            <span v-else>No card</span>
         </p>
     </div>
 </body>
@@ -50,8 +62,8 @@
                 name : "John Doe",
                 age : 90,
                 salary : 5000,
-                hasCard: true,
-                // hasCard: false
+                // hasCard: true,
+                hasCard: false
             }
 
             function getRandomNumber(){
