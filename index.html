@@ -8,6 +8,7 @@
 </head>
 <body>
     <div id="vue">
+        <a v-bind:href="styleUrl">Style</a>
         <p>
             <h3>Veriables</h3>
             <!-- String is {{message}} -->
@@ -46,7 +47,22 @@
                 V-if
             </h3>
             <span v-if = "employee.hasCard"> Card </span>
+            <span v-else-if = "employee.salary>60000">Eligible for Card </span>
             <span v-else>No card</span>
+        </p>
+        <p>
+            <h3>
+                V-For
+            </h3>
+            <p v-for = "number in numbers">
+                Lucky Number is {{number}}
+            </p>
+            <h3>
+                V-For with index
+            </h3>
+            <p v-for = "(number,index) in numbers">
+                {{index + 1}} Number {{number}}
+            </p>
         </p>
     </div>
 </body>
@@ -57,13 +73,14 @@
             const message = "Hello Vue";
             let number = ref(1);
             const numbers = [1,3,5];
-            const blogUrl = "https://vuejs.org/guide/quick-start.html"
+            const blogUrl = "https://vuejs.org/guide/quick-start.html";
+            const styleUrl = "style.html"
             const employee = {
                 name : "John Doe",
                 age : 90,
                 salary : 5000,
-                // hasCard: true,
-                hasCard: false
+                hasCard: true,
+                // hasCard: false
             }
 
             function getRandomNumber(){
@@ -86,6 +103,7 @@
                 numbers,
                 employee,
                 blogUrl,
+                styleUrl,
                 getRandomNumber,
                 getMessage,
                 updateNumber

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div v-bind:style = "{'background-color':'aqua', 'font-size':'40px'}">{{message}}</div>
+    </div>
+</body>
+<script>
+    const {createApp} = Vue;
+    createApp({
+        setup(){
+            const message = "Hello";
+            return{
+                message
+            };
+        }
+    }).mount("#app");
+</script>
+</html>
