@@ -9,6 +9,9 @@
 <body>
     <div id="app">
         <div v-bind:style = "{'background-color':'aqua', 'font-size':'40px'}">{{message}}</div>
+        <div v-bind:style = "{backgroundColor:'red',fontSize: fontSizeTemp +'px'}">
+            {{message}}
+        </div>
     </div>
 </body>
 <script>
@@ -16,8 +19,10 @@
     createApp({
         setup(){
             const message = "Hello";
+            const fontSizeTemp = 50;
             return{
-                message
+                message,
+                fontSizeTemp
             };
         }
     }).mount("#app");
