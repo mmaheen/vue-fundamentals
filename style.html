@@ -12,6 +12,9 @@
         <div v-bind:style = "{backgroundColor:'red',fontSize: fontSizeTemp +'px'}">
             {{message}}
         </div>
+        <p class = "padding-medium" v-bind:class = "{h1:true}">Test</p>
+        <p class = "padding-medium" v-bind:class = "{h1:false}">Test</p>
+        <p v-bind:style = "someStyle"> From object binding </p>
     </div>
 </body>
 <script>
@@ -20,11 +23,36 @@
         setup(){
             const message = "Hello";
             const fontSizeTemp = 50;
+            const someStyle = {
+                fontSize:"40px",
+                backgroundColor: "lightgreen",
+                margin : "50px",
+                border : "1px solid black"
+            };
             return{
                 message,
-                fontSizeTemp
+                fontSizeTemp,
+                someStyle
             };
         }
     }).mount("#app");
 </script>
+<style>
+    .h1{
+        font-size: 90px;
+        color :blueviolet;
+    }
+    .h2{
+        color :beige;
+    }
+    .bg-grey{
+        background-color: grey;
+    }
+    .bg-green{
+        background-color: green;
+    }
+    .padding-medium{
+        padding: 30px;
+    }
+</style>
 </html>
