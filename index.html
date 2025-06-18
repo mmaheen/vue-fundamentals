@@ -11,7 +11,7 @@
         <p>
             <h3>Veriables</h3>
             <!-- String is {{message}} -->
-            Message from function: {{getMessage()}} <br>
+            Message from function: <span v-html = "getMessage()"></span>  <br>
             Number is {{number}}
         </p>
         <p>
@@ -27,7 +27,7 @@
         <p>
             <h3>Function</h3>
             <!-- {{getRandomNumber()}} -->
-             {{updateNumber()}}
+            Second clock: {{updateNumber()}}
         </p>
     </div>
 </body>
@@ -36,7 +36,7 @@
     createApp({
         setup(){
             const message = "Hello Vue";
-            let number = ref(7);
+            let number = ref(1);
             const numbers = [1,3,5];
             const employee = {
                 name : "John Doe",
@@ -50,7 +50,7 @@
                 return number.value;
             }
             function getMessage(){
-                return message;
+                return `<h1> Html </h1>`;
             }
             function updateNumber(){
                 setTimeout(()=> {
