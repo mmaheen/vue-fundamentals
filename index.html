@@ -9,6 +9,7 @@
 <body>
     <div id="vue">
         <a v-bind:href="styleUrl">Style</a>
+        <a v-bind:href="javascriptUrl">JavaScript</a>
         <p>
             <h3>Veriables</h3>
             <!-- String is {{message}} -->
@@ -75,6 +76,7 @@
             const numbers = [1,3,5];
             const blogUrl = "https://vuejs.org/guide/quick-start.html";
             const styleUrl = "style.html"
+            const javascriptUrl = "javascript.html"
             const employee = {
                 name : "John Doe",
                 age : 90,
@@ -104,6 +106,7 @@
                 employee,
                 blogUrl,
                 styleUrl,
+                javascriptUrl,
                 getRandomNumber,
                 getMessage,
                 updateNumber
