@@ -20,8 +20,9 @@
     const {createApp} = Vue;
     createApp({
         setup(){
+            const message = "Hello Vue"
             return {
-                message : "Vue",
+                message,
             };
         },
     }).mount("#vue");
