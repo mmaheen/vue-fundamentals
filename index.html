@@ -29,6 +29,12 @@
             <!-- {{getRandomNumber()}} -->
             Second clock: {{updateNumber()}}
         </p>
+        <p>
+            <h3>
+                v-bind
+            </h3>
+            <a v-bind:href="blogUrl">Blog</a>
+        </p>
     </div>
 </body>
 <script>
@@ -38,6 +44,7 @@
             const message = "Hello Vue";
             let number = ref(1);
             const numbers = [1,3,5];
+            const blogUrl = "https://vuejs.org/guide/quick-start.html"
             const employee = {
                 name : "John Doe",
                 age : 90,
@@ -63,6 +70,7 @@
                 number,
                 numbers,
                 employee,
+                blogUrl,
                 getRandomNumber,
                 getMessage,
                 updateNumber
