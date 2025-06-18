@@ -8,21 +8,40 @@
 </head>
 <body>
     <div id="vue">
-        <h1>
-            Hello
-        </h1>
-        <h2>
-            {{ message }}
-        </h2>
+        <p>
+            <h3>Veriables</h3>
+            String is {{message}}
+            Number is {{number}}
+        </p>
+        <p>
+            <h3>Array</h3>
+            Numbers array list is : {{numbers}} <br>
+            Numbers array 1st element is : {{numbers[2]}}
+        </p>
+        <p>
+            <h3>Object</h3>
+            {{employee}} <br>
+            {{employee.name}}
+        </p>
     </div>
 </body>
 <script>
     const {createApp} = Vue;
     createApp({
         setup(){
-            const message = "Hello Vue"
+            const message = "Hello Vue";
+            const number = 7;
+            const numbers = [1,3,5];
+            const employee = {
+                name : "John Doe",
+                age : 90,
+                salary : 5000
+            }
             return {
                 message,
+                number,
+                numbers,
+                employee
             };
         },
     }).mount("#vue");
