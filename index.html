@@ -22,7 +22,8 @@
         <p>
             <h3>Object</h3>
             {{employee}} <br>
-            {{employee.name}}
+            Employee name is : {{employee.name}} <br>
+            <span v-show = "employee.hasCard"> Card </span>
         </p>
         <p>
             <h3>Function</h3>
@@ -48,7 +49,9 @@
             const employee = {
                 name : "John Doe",
                 age : 90,
-                salary : 5000
+                salary : 5000,
+                hasCard: true,
+                // hasCard: false
             }
 
             function getRandomNumber(){
